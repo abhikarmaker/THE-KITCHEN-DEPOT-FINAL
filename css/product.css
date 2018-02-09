@@ -1,0 +1,70 @@
+#productTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#productTable td, #productTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#productTable td{
+	font-size:14px;
+	font-weight:500;
+	text-align:center;
+}
+#productTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#productTable tr:hover {background-color: #f5f5f5;
+    border: 1px solid black;
+	transition-duration: 1s;
+	color: #e67e22;
+}
+
+#productTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: black;
+    color: #e67e22;
+	font-size:16px;
+}
+#productTable img{
+	width:18em;
+	opacity:1;
+}
+#productTable img:hover{
+	opacity:0.7;
+	transition-duration: 1s;
+	cursor:pointer;
+}
+
+ @media only screen and (max-width: 900px) {
+        .colOne{
+            display: none;
+        }
+    }
+	.one a:link
+    {
+		background-color: f2f2f2;
+		color: red;
+	}
+	
+	.one a:visited
+    {
+		background-color: f2f2f2;
+		color:blue;
+	}
+	
+	.one a:hover
+    {
+		background-color: f2f2f2;
+		color:yellow;
+		font-style: italic;
+	}
+    .one a:active
+    {
+        background-color:f2f2f2;
+		color:green;
+    }
+	
