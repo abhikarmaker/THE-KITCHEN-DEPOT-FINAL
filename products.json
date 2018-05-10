@@ -1,0 +1,132 @@
+{
+   "product": [
+       {
+           "productdetails":"images/productImg1.png",
+           "name": "Cook' N Carry Portable Slow Cooker",
+           "description": "Cook' N Carry 6 Quart Oval Manual Portable Slow Cooker, Stainless Steel",
+           "quantity": 10,
+		   "brand": "Crock Pot",
+		   "price": "$23.99"
+       },
+	   {
+           "productdetails":"images/productImg2.jpg",
+           "name": "Programmable Cook & Carry Slow Cooker",
+           "description": "Crock Pot 6 Quart Programmable Cook & Carry Slow Cooker with Digital Timer, Stainless Steel",
+           "quantity": 12,
+		   "brand": "Crock Pot",
+		   "price": "$74.99"
+       },
+	   {
+           "productdetails":"images/productImg3.jpg",
+           "name": "Compact Slow Cooker",
+           "description": "Cookworks 1.5L Compact Slow Cooker, White",
+           "quantity": 8,
+		   "brand": "Cookworks",
+		   "price": "$20.99"
+       },
+	   {
+           "productdetails":"images/productImg4.jpg",
+           "name": "Morphy Slow Cooker",
+           "description": "Morphy Richards 6.5L Slow Cooker",
+           "quantity": 5,
+		   "brand": "Morphy Richards",
+		   "price": "$33.99"
+       },
+	   {
+           "productdetails":"images/productImg5.jpg",
+           "name": "Deluxe Slow Cooker",
+           "description": "All Clad Stainless 6.5Qt Deluxe Slow Cooker",
+           "quantity": 10,
+		   "brand": "Cookworks",
+		   "price": "$199.99"
+       },
+	   {
+           "productdetails":"images/productImg6.jpg",
+           "name": "Russell Black Slow Cooker",
+           "description": "Russell Hobbs Your Creations 3.5L Black Slow Cooker",
+           "quantity": 8,
+		   "brand": "Russell Hobbs",
+		   "price": "$74.99"
+       },
+	   {
+           "productdetails":"images/productImg7.jpg",
+           "name": "Russell Silver Slow Cooker",
+           "description": "Russell Hobbs Your Creations 4.5L Silver Slow Cooker",
+           "quantity": 8,
+		   "brand": "Russell Hobbs",
+		   "price": "$44.99"
+       },
+	   {
+           "productdetails":"images/productImg8.jpg",
+           "name": "Smart Pot Slow Cooker",
+           "description": "Crock Pot 7 Quart Smart pot Slow Cooker, Brushed Stainless Steel",
+           "quantity": 18,
+		   "brand": "Crock Pot",
+		   "price": "$$31.75"
+       },
+	   {
+           "productdetails":"images/productImg9.jpg",
+           "name": "Cuisinart Cook Central",
+           "description": "Cuisinart Cook Central 6 Quart",
+           "quantity": 8,
+		   "brand": "Cuisinart",
+		   "price": "$219.99"
+       },
+	   {
+           "productdetails":"images/productImg10.jpg",
+           "name": "Slow Cooker Red",
+           "description": "Crock Pot 2 Qt Slow Cooker, Red ",
+           "quantity": 15,
+		   "brand": "Crock Pot",
+		   "price": "$74.99"
+       },
+	   {
+           "productdetails":"images/productImg11.jpg",
+           "name": "Sabichi Rice Cooker",
+           "description": "Sabichi Rice Cooker, 1.8 Litre, White",
+           "quantity": 5,
+		   "brand": "Sabichi",
+		   "price": "$30.99"
+       },
+	   {
+           "productdetails":"images/productImg12.jpg",
+           "name": "Oval Programmable Slow Cooker",
+           "description": "Oval Countdown Programmable Slow Cooker",
+           "quantity": 12,
+		   "brand": "Crock Pot",
+		   "price": "$74.99"
+       },
+	   {
+           "productdetails":"images/productImg13.jpg",
+           "name": " Morphy Slow Cooker",
+           "description": "Morphy Richards 2.5L Slow Cooker, Stainless Steel",
+           "quantity": 8,
+		   "brand": "Morphy Richards",
+		   "price": "$24.99"
+       },
+	   {
+           "productdetails":"images/productImg14.jpg",
+           "name": "Hinged Lid Slow Cooker",
+           "description": "Crock Pot 5.7L Hinged Lid Slow Cooker",
+           "quantity": 15,
+		   "brand": "Crock Pot",
+		   "price": "$58.75"
+       },
+	   {
+           "productdetails":"images/productImg15.jpg",
+           "name": "Instant Pot Ultra",
+           "description": "Instant Pot Ultra 6 Quart Electric",
+           "quantity": 15,
+		   "brand": "Crock Pot",
+		   "price": "$195.95"
+       },
+	   {
+           "productdetails":"images/product.jpg",
+           "name": "IntelliTime Slow Cooker",
+           "description": "IntelliTime 6 Quart Slow Cooker",
+           "quantity": 25,
+		   "brand": "Hamilton Beach",
+		   "price": "$159.99"
+       }
+   ]
+}

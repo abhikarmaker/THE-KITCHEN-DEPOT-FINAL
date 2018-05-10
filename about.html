@@ -8,6 +8,20 @@
 		<link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+		<script src="jquery/main.js"></script>
+		<script>
+			$( document ).one('scroll', function() {
+			  $( "#slideleft h3" ).effect("slide", { direction: "left" }, 1000);
+			});
+			$( document ).one('scroll', function() {
+			   $( "#slideright h3" ).effect("slide", { direction: "right" }, 2000);
+			});
+			$( document ).one('scroll', function() {
+			   $( "#slidelast h3" ).effect("slide", { direction: "right" }, 4000);
+			});
+		</script>
 	</head>
 	<body>
 		<div id="container">
@@ -15,17 +29,18 @@
 			<header>
 				<!-- Add Logo-->
 					<img class="logo" src="images/logo3.png" alt="logo">
-				<nav> <!-- Nav element added-->
-					<ul>
-						<li><a href="index.html">Home</a></li>
+				<nav class="menu">
+			<ul class="active">
+				<li class="current-item"><a href="index.html">Home</a></li>
 						<li><a href="about.html">AboutUs</a></li>
 						<li><a href="product.html">Products</a></li>
 						<li><a href="gallery.html">Gallery</a></li>
-						<li><a href="contact.html">ContactUs</a></li>
+						<li><a href="contact.html">Contact</a></li>
 						<li><a href="join.html">Join</a></li>
-					</ul>
-				</nav>
-				<div class="heading">
+			</ul>
+		<a class="toggle-nav" href="#">&#9776;</a>
+		</nav>
+				<div class="heading" id="faqs"><br><br><br>
 					<h1>The Kitchen Depot</h1><!-- Heading 1-->
 					<h2>We make Life Easy...!!!</h2> <!-- Heading 2-->
 					<div class="button-awesome">
@@ -34,8 +49,8 @@
 				</div>
 			</header><!-- Header Ends -->
 			
-			<main class="overview">
-				<h3 class=text-center>COMPANY OVERVIEW</h3>
+			<main class="overview" id = "collapse">
+				<h3 class="toggle"><center>COMPANY OVERVIEW</center></h3>
 				<section>
 				<article>
 				<p>The Kitchen Depot is considered as one of the leading supplier of Slow Cooker products in Canada.</p>
@@ -82,7 +97,7 @@
 				<!-- End of image of Executives -->
 				</section>
 				<section>
-				<h3 class=text-center>Six Reasons Why You Should Shop With us.</h3>
+				<h3 class="toggle"><center>Six Reasons Why You Should Shop With us.</center></h3>
 					<article>
 						<ul>
 							<li>We Make Life Easy</li>
@@ -95,7 +110,7 @@
 					</article>
 				</section>
 				<section>
-				<h3 class=text-center>Our guarantee</h3>
+				<h3 class="toggle"><center>Our guarantee</center></h3>
 					<article>
 						<ul>
 							<li>100% Satisfaction Guarantee.</li>

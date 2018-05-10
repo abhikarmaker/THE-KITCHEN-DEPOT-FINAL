@@ -10,28 +10,45 @@
 		<link rel="stylesheet" href="css/product.css" type="text/css">
 		<link href="Content/bootstrap-theme.css" rel="stylesheet" />
 		<link href="Content/bootstrap.css" rel="stylesheet" />
-		 <!--  <link href="css/StyleSheet.css" rel="stylesheet" />  -->
 		<link href="Content/bootstrap-theme.min.css" rel="stylesheet">
 		<link href="Content/bootstrap.min.css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+		<script src="jquery/main.js"></script>
+		
+		<script>
+		$(function() {
+		var people = [];
+		$.getJSON('products.json', function(data) {
+			$.each(data.product, function(i, f) {
+			  var tblRow = "<tr>" + "<td class='colOne'><img src='" + f.productdetails + "' class='productImg' alt='product' onclick='openModal();currentSlide(1)'></td>" +
+			   "<td><a href=''>" + f.name + "</a></td>" + "<td>" + f.description + "</td>" + "<td>" + f.quantity + "</td>"+ "<td>" + f.brand + "</td>" +"<td>" + f.price + "</td>" + "</tr>"
+			   $(tblRow).appendTo("#productTable tbody");
+			});
+		});
+	});
+</script>
 	</head>
 	<body>
 		<div id="container">
 		<!-- Header Starts -->
 			<header>
-			<!-- Add Logo-->
+				<!-- Add Logo-->
 					<img class="logo" src="images/logo3.png" alt="logo">
-				<nav> <!-- Nav element added-->
-					<ul>
-						<li><a href="index.html">Home</a></li>
+			<nav class="menu">
+				<ul class="active">
+				<li class="current-item"><a href="index.html">Home</a></li>
 						<li><a href="about.html">AboutUs</a></li>
 						<li><a href="product.html">Products</a></li>
 						<li><a href="gallery.html">Gallery</a></li>
-						<li><a href="contact.html">ContactUs</a></li>
+						<li><a href="contact.html">Contact</a></li>
 						<li><a href="join.html">Join</a></li>
-					</ul>
-				</nav>
-				<div class="heading">
+				</ul>
+				<a class="toggle-nav" href="#">&#9776;</a>
+			</nav>
+				<div class="heading" id="faqs"><br><br><br>
 					<h1>The Kitchen Depot</h1><!-- Heading 1-->
 					<h2>We make Life Easy...!!!</h2> <!-- Heading 2-->
 					<div class="button-awesome">
@@ -40,134 +57,20 @@
 				</div>
 			</header><!-- Header Ends -->
 			
-			<!-- Main Starts -->
-			<main class="products">
-			
-				<div style="overflow-x:auto;">
-				  <table id="productTable">
-						<caption><h3 class=text-center style="color:black">SLOW COOKER PRODUCT</h3></caption>
-						<tr>
-							<th class="colOne">Product</th>
-							<th>Name</th>
-							<th>Description</th>
-							<th>Quantity</th>
-							<th>Brand</th>
-							<th>Price</th>
-						</tr><tr>
-							<td class="colOne"><img src="images/productImg1.png" class="productImg" alt="product" onclick="openModal();currentSlide(1)"></td>
-							<td class="one"><a href="">Cook' N Carry Portable Slow Cooker</a></td>
-							<td>Cook' N Carry 6 Quart Oval Manual Portable Slow Cooker, Stainless Steel</td>
-							<td>10</td>
-							<td>Crock Pot</td>
-							<td>$23.99</td>
-						</tr><tr>
-							<td class="colOne"><img src="images/productImg2.jpg" class="productImg" alt="product" onclick="openModal();currentSlide(2)"></td>
-							<td class="one"><a href="">Programmable Cook & Carry Slow Cooker</a></td>
-							<td>Crock Pot 6 Quart Programmable Cook & Carry Slow Cooker with Digital Timer, Stainless Steel</td>
-							<td>12</td>
-							<td>Crock Pot</td>
-							<td>$74.99</td>
-						</tr><tr>
-							<td class="colOne"><img src="images/productImg3.jpg" class="productImg" alt="product" onclick="openModal();currentSlide(3)"></td>
-							<td class="one"><a href="">Compact Slow Cooker</a></td>
-							<td>Cookworks 1.5L Compact Slow Cooker, White</td>
-							<td>8</td>
-							<td>Cookworks</td>
-							<td>$20.99</td>
-						</tr><tr>
-							<td class="colOne"><img src="images/productImg4.jpg" class="productImg" alt="product" onclick="openModal();currentSlide(4)"></td>
-							<td class="one"><a href="">Morphy Slow Cooker</a></td>
-							<td>Morphy Richards 6.5L Slow Cooker</td>
-							<td>5</td>
-							<td>Morphy Richards</td>
-							<td>$33.99</td>
-						</tr><tr>
-							<td class="colOne"><img src="images/productImg5.jpg" class="productImg" alt="product" onclick="openModal();currentSlide(5)"></td>
-							<td class="one"><a href="">Deluxe Slow Cooker</a></td>
-							<td>All Clad Stainless 6.5Qt Deluxe Slow Cooker</td>
-							<td>10</td>
-							<td>Cookworks</td>
-							<td>$199.99</td>
-						</tr><tr>
-							<td class="colOne"><img src="images/productImg6.jpg" class="productImg" alt="product" onclick="openModal();currentSlide(6)"></td>
-							<td class="one"><a href="">Russell Black Slow Cooker</a></td>
-							<td>Russell Hobbs Your Creations 3.5L Black Slow Cooker</td>
-							<td>8</td>
-							<td>Russell Hobbs</td>
-							<td>$74.99</td>
-						</tr><tr>
-							<td class="colOne"><img src="images/productImg7.jpg" class="productImg" alt="product" onclick="openModal();currentSlide(7)"></td>
-							<td class="one"><a href="">Russell Silver Slow Cooker</a></td>
-							<td>Russell Hobbs Your Creations 4.5L Silver Slow Cooker</td>
-							<td>8</td>
-							<td>Russell Hobbs</td>
-							<td>$44.99</td>
-						</tr><tr>
-							<td class="colOne"><img src="images/productImg8.jpg" class="productImg" alt="product" onclick="openModal();currentSlide(8)"></td>
-							<td class="one"><a href="">Smart Pot Slow Cooker</a></td>
-							<td>Crock Pot 7 Quart Smart pot Slow Cooker, Brushed Stainless Steel</td>
-							<td>18</td>
-							<td>Crock Pot</td>
-							<td>$31.75</td>
-						</tr><tr>
-							<td class="colOne"><img src="images/productImg9.jpg" class="productImg" alt="product" onclick="openModal();currentSlide(9)"></td>
-							<td class="one"><a href="">Cuisinart Cook Central</a></td>
-							<td>Cuisinart Cook Central 6 Quart</td>
-							<td>8</td>
-							<td>Cuisinart</td>
-							<td>$219.99</td>
-						</tr><tr>
-							<td class="colOne"><img src="images/productImg10.jpg" class="productImg" alt="product" onclick="openModal();currentSlide(10)"></td>
-							<td class="one"><a href="">Slow Cooker Red</a></td>
-							<td>Crock Pot 2 Qt Slow Cooker, Red </td>
-							<td>15</td>
-							<td>Crock Pot</td>
-							<td>$74.99</td>
-						</tr><tr>
-							<td class="colOne"><img src="images/productImg11.jpg" class="productImg" alt="product" onclick="openModal();currentSlide(11)"></td>
-							<td class="one"><a href="">Sabichi Rice Cooker</a></td>
-							<td>Sabichi Rice Cooker, 1.8 Litre, White</td>
-							<td>5</td>
-							<td>Sabichi</td>
-							<td>$30.99</td>
-						</tr><tr>
-							<td class="colOne"><img src="images/productImg12.jpg" class="productImg" alt="product" onclick="openModal();currentSlide(12)"></td>
-							<td class="one"><a href="">Oval Programmable Slow Cooker</a></td>
-							<td>Oval Countdown Programmable Slow Cooker</td>
-							<td>12</td>
-							<td>Crock Pot</td>
-							<td>$74.99</td>
-						</tr><tr>
-							<td class="colOne"><img src="images/productImg13.jpg" class="productImg" alt="product" onclick="openModal();currentSlide(13)"></td>
-							<td class="one"><a href=""><a href="">Morphy Slow Cooker</a></td>
-							<td>Morphy Richards 2.5L Slow Cooker, Stainless Steel</td>
-							<td>8</td>
-							<td>Morphy Richards</td>
-							<td>$24.99</td>
-						</tr><tr>
-							<td class="colOne"><img src="images/productImg14.jpg" class="productImg" alt="product" onclick="openModal();currentSlide(14)"></td>
-							<td class="one"><a href="">Hinged Lid Slow Cooker</a></td>
-							<td>Crock Pot 5.7L Hinged Lid Slow Cooker</td>
-							<td>15</td>
-							<td>Crock Pot</td>
-							<td>$58.75</td>
-						</tr><tr>
-							<td class="colOne"><img src="images/productImg15.jpg" class="productImg" alt="product" onclick="openModal();currentSlide(15)"></td>
-							<td class="one"><a href="">Instant Pot Ultra</a></td>
-							<td>Instant Pot Ultra 6 Quart Electric</td>
-							<td>15</td>
-							<td>Crock Pot</td>
-							<td>$195.95</td>
-						</tr><tr>
-							<td class="colOne"><img src="images/product.jpg" class="productImg" alt="product" onclick="openModal();currentSlide(16)"></td>
-							<td class="one"><a href="">IntelliTime Slow Cooker</a></td>
-							<td>IntelliTime 6 Quart Slow Cooker</td>
-							<td>25</td>
-							<td>Hamilton Beach</td>
-							<td>$159.99</td>
-						</tr>
-				  </table>
-				</div>
+			<main class="productData">
+			<caption><h3 class=text-center style="color:black">SLOW COOKER PRODUCT</h3></caption>
+				<table id="productTable" border = "2">
+				<thead>
+					<th class="colOne">Product</th>
+					<th>Name</th>
+					<th>Description</th>
+					<th>Quantity</th>
+					<th>Brand</th>
+					<th>Price</th>
+				</thead>
+				<tbody>
+				</tbody>
+				</table>
 				
 				<!--Modal Opens -->
 				<div id="myModal" class="modal">
@@ -282,7 +185,8 @@
 					  captionText.innerHTML = dots[slideIndex-1].alt;
 					}
 				</script>
-			</main><!-- Main Ends-->
+			</main>
+			
 			
 			<!-- Footer Starts -->
 			<footer class="navbar-default">

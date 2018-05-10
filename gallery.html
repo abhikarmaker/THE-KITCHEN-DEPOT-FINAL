@@ -7,11 +7,41 @@
 		<script src="Scripts/jquery-1.9.1.js"></script>
 		<script src="Scripts/bootstrap.js"></script>
 		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="stylesheet" href="bxslider/jquery.bxslider.css">
+		<link rel="stylesheet" href="css/bxslider.css" type="text/css">
 		<link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
 		<link href="Content/bootstrap-theme.css" rel="stylesheet" />
 		<link href="Content/bootstrap.css" rel="stylesheet" />
+		<link href="bxslider-4-4.2.12/dist/jquery.bxslider.css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+		<script src="jquery/main.js"></script>
+		<script src="bxslider/js/jquery.bxslider.min.js"></script>
+		<script>
+
+ 
+/*NEW BX SLIDER*/
+    $(document).ready(function() {
+        	$(".container1").bxSlider({
+        	//page: true,
+        	auto: true,
+        	captions: true,
+        	minSlides: 1,
+        	maxSlides: 1,
+            slideWidth: 600,
+        	control: true,
+        	moveSlides: 1,
+			
+			onSliderLoad: function(){
+			jQuery(".container1").css("visibility", "visible");
+			},
+			pager: true,
+			pause: 3000	
+			});
+    	});
+		</script>
 	</head>
 	<body>
 		<div id="container">
@@ -25,17 +55,18 @@
 			</div>
 			<div class="content">
 				<img class="logo" src="images/logo3.png" alt="logo">
-					 <nav>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">AboutUs</a></li>
-							<li><a href="product.html">Products</a></li>
-							<li><a href="gallery.html">Gallery</a></li>
-							<li><a href="contact.html">ContactUs</a></li>
-							<li><a href="join.html">Join</a></li>
-						</ul>
-					</nav>
-				<div class="heading">
+				<nav class="menu">
+				<ul class="active">
+				<li class="current-item"><a href="index.html">Home</a></li>
+						<li><a href="about.html">AboutUs</a></li>
+						<li><a href="product.html">Products</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="join.html">Join</a></li>
+				</ul>
+				<a class="toggle-nav" href="#">&#9776;</a>
+				</nav>
+				<div class="headingContent" id="faqs"><br><br><br>
 					<h1>The Kitchen Depot</h1><!-- Heading 1-->
 					<h2>We make Life Easy...!!!</h2> <!-- Heading 2-->
 					<div class="button-awesome">
@@ -43,6 +74,7 @@
 					</div>
 				</div>
 			</div>
+			<!-- Header Starts -->
 			<script>
 				var video = document.getElementById("myVideo");
 				var btn = document.getElementById("myBtn");
@@ -62,12 +94,32 @@
 			<!-- Header Ends -->
 		
 			<!-- Main Start -->
-			<main class="gallery">	
-				<section>
-					<div class="mobile">
-					<div class="contentHeader1">
-						<h3 class=text-center>PRODUCT</h3>	
-						<div class="col-md-10 col-md-offset-1">
+			<main class="gallery">
+			<!-- <section>
+			<div class="container1">
+			 <div class="w3-content w3-section" style="max-width:500px">
+				<div><img src="images/productImg1.png" style="width:100%"></div>
+				<div><img src="images/productImg2.jpg" style="width:100%"></div>
+				<div><img src="images/productImg3.jpg" style="width:100%"></div>
+				<div><img src="images/productImg4.jpg" style="width:100%"></div>
+				<div><img src="images/productImg5.jpg" style="width:100%"></div>
+				<div><img src="images/productImg6.jpg" style="width:100%"></div>
+			</div> 
+			</section> -->
+
+			<section>
+				<div class="contentHeader2">
+					<h3 class=text-center>PRODUCT</h3>	
+				</div>
+				<div class="container1">
+						
+							<div><img src="images/productImg1.png" style="width:70%"></div>
+							<div><img src="images/productImg2.jpg" style="width:70%"></div>
+							<div><img src="images/productImg3.jpg" style="width:70%"></div>
+							<div><img src="images/productImg4.jpg" style="width:70%"></div>
+							<div><img src="images/productImg5.jpg" style="width:70%"></div>
+							<div><img src="images/productImg6.jpg" style="width:70%"></div>
+<!-- 						<div class="col-md-10 col-md-offset-1">
 							<div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="2000" id="myCarousel">
 							  <div class="carousel-inner">
 								<div class="item active">
@@ -119,10 +171,9 @@
 							  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
 							  <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
 							</div>
-						</div>
+						</div> -->
 					</div>
-					</div>
-					<script>
+<!-- 					<script>
 						$(document).ready(function(){
 						$('.carousel[data-type="multi"] .item').each(function(){
 						  var next = $(this).next();
@@ -140,7 +191,7 @@
 						  }
 						});
 						});
-					</script>
+					</script> -->
 				</section>			
 				<section>
 					<div class="contentHeader2">

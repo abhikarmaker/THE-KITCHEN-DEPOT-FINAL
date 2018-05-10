@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- Abhijeet Karmaker October 06 2017 -->
+<html lang="en">
+	<head>
+		<title>The Kitchen Depot</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+		<script src="jquery/main.js"></script>
+		<script>
+		$(document).ready(function(){
+			setInterval(callMe,4000)
+		});
+		function callMe(){
+			$( "#slider p" ).effect("slide", { direction: "left" },3000);
+		};
+		</script>
+	</head>
+	<body>
+		<div id="container">
+		<!-- Header Starts -->
+			<header>
+				<!-- Add Logo-->
+					<img class="logo" src="images/logo3.png" alt="logo">
+				<nav class="menu">
+			<ul class="active">
+				<li class="current-item"><a href="index.html">Home</a></li>
+						<li><a href="about.html">AboutUs</a></li>
+						<li><a href="product.html">Products</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="join.html">Join</a></li>
+			</ul>
+		<a class="toggle-nav" href="#">&#9776;</a>
+		</nav>
+				<div class="heading" id="faqs"><br><br><br>
+					<h1>The Kitchen Depot</h1><!-- Heading 1-->
+					<h2>We make Life Easy...!!!</h2> <!-- Heading 2-->
+					<div class="button-awesome">
+						<a href="product.html" class="btn btn-half">SHOP NOW</a>
+					</div>
+				</div>
+			</header><!-- Header Ends -->
+			
+			<!-- Main Starts -->
+			<main class="contact" id="slider">
+ 				<h3 class=text-center>Thank you for your request!</h3>	
+				<center><p>We will contact you within the next 24 hours.</p></center>
+			</main><!-- Main Ends-->
+			
+			<!-- Footer Starts -->
+			<footer class="navbar-default">
+				<div class="container">
+					<div class="row-bottom-rule">
+						<b>&copy; Copyright 2018. All Rights Reserved.</b><br>
+						<a href="mailto:info@thekitchendepot.com">Request Information</a><br>
+						<b>Abhijeet Karmaker &nbsp; &nbsp; C0720286</b>
+					</div>
+				</div>
+			</footer>
+			<!-- Footer Ends-->
+		</div> <!-- Container End -->
+	</body>
+</html>

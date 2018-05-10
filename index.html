@@ -8,25 +8,58 @@
 		<link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+		<script src="jquery/main.js"></script>
+		<script>
+		$(document).scroll(function(){
+			setInterval(callMe1,4000)
+		});
+		function callMe1(){
+			$( "#slideleft h3" ).effect("slide", { direction: "left" },3000);
+		};
+		$(document).scroll(function(){
+			setInterval(callMe2,4000)
+		});
+		function callMe2(){
+			$( "#slideright h3" ).effect("slide", { direction: "right" },3000);
+		};
+		$(document).scroll(function(){
+			setInterval(callMe3,4000)
+		});
+		function callMe3(){
+			$( "#slidelast h3" ).effect("slide", { direction: "right" },3000);
+		};
+		
+			/*$( document ).one('scroll', function() {
+			  $( "#slideleft h3" ).effect("slide", { direction: "left" }, 1000);
+			});
+			$( document ).one('scroll', function() {
+			   $( "#slideright h3" ).effect("slide", { direction: "right" }, 2000);
+			});
+			$( document ).one('scroll', function() {
+			   $( "#slidelast h3" ).effect("slide", { direction: "right" }, 4000);
+			});*/
+		</script>
 	</head>
 	<body>
 		<div id="container">
 		<!-- Header Starts -->
 			<header>
-			<!-- Add Logo-->
-				<img class="logo" src="images/logo3.png" alt="logo">
-				<!-- Nav element added-->
-				<nav> 
-					<ul>
-						<li><a href="index.html">Home</a></li>
+				<!-- Add Logo-->
+					<img class="logo" src="images/logo3.png" alt="logo">
+				<nav class="menu">
+			<ul class="active">
+				<li class="current-item"><a href="index.html">Home</a></li>
 						<li><a href="about.html">AboutUs</a></li>
 						<li><a href="product.html">Products</a></li>
 						<li><a href="gallery.html">Gallery</a></li>
-						<li><a href="contact.html">ContactUs</a></li>
+						<li><a href="contact.html">Contact</a></li>
 						<li><a href="join.html">Join</a></li>
-					</ul>
-				</nav>
-				<div class="heading">
+			</ul>
+		<a class="toggle-nav" href="#">&#9776;</a>
+		</nav>
+				<div class="heading" id="faqs"><br><br><br>
 					<h1>The Kitchen Depot</h1><!-- Heading 1-->
 					<h2>We make Life Easy...!!!</h2> <!-- Heading 2-->
 					<div class="button-awesome">
@@ -37,11 +70,11 @@
 			
 			<!-- Main Starts -->
 			<main> <!-- Main element Image Added for Welcome, Product and weekly sales-->
-				<div class="welcome">
+				<div class="welcome" id="slideleft">
 					<h3 class=text-center>WELCOME TO THE KITCHEN DEPOT</h3>
 					<img src="images/welcome3.jpg" alt="welcome">
 				</div>
-				<div class="productofthemonth">
+				<div class="productofthemonth" id="slideright">
 					<h3 class=text-center>PRODUCT OF THE MONTH</h3>
 					<div class="row">
 						<div class="col-md-6">
@@ -66,13 +99,13 @@
 					</div>
 				</div>		
 				<!-- Weekly product sales -->
-				<div class="weeklySales">
+				<div class="weeklySales" id="slidelast">
 					<h3 class=text-center>WEEKLY SALES</h3>
 				</div>
 				<!-- Weekly Product Image -->
 				<div class="week">
-					<div class="row">
-						<div class="col-md-4">
+					<div class="row" >
+						<div class="col-md-4" >
 							<img src="images/productImg1.png" alt="productImg1">
 							<p class="productdetails"><a href="">Cook' N Carry 6-Quart Oval Manual Portable Slow Cooker, Stainless Steel</a><br><span class="price">$23.99</span></p>
 						</div>
@@ -80,7 +113,7 @@
 							<img src="images/productImg2.jpg" alt="productImg2">
 							<p class="productdetails"><a href="">Crock-Pot 6-Quart Programmable Cook & Carry Slow Cooker with Digital Timer, Stainless Steel</a> <br><span class="price">$74.99</span></p>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-4" >
 							<img src="images/productImg4.jpg" alt="productImg3">
 							<p class="productdetails"><a href="">Morphy Richards 6.5L Slow Cooker </a><br><span class="price">$33.99</span></p>
 						</div>
